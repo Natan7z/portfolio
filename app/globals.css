@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: ui-monospace, "JetBrains Mono", "Fira Code", Menlo, Consolas, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-ink-950 text-zinc-200 antialiased;
+}
+
+::selection {
+  background: #ff8a3d55;
+}
+
+/* Transição suave de cores ao trocar o tema */
+*,
+*::before,
+*::after {
+  transition-property: color, background-color, border-color;
+  transition-duration: 300ms;
+}
+
+/* Remove o fundo que o navegador aplica ao preenchimento automático */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+  -webkit-text-fill-color: #f4f4f5;
+  caret-color: #f4f4f5;
+  -webkit-box-shadow: 0 0 0 1000px #12111a inset;
+  box-shadow: 0 0 0 1000px #12111a inset;
+  transition: background-color 9999s ease-in-out 0s;
+}
+
+/* Ícones do botão de tema: sol no escuro, lua no claro */
+.theme-sun { display: block; }
+.theme-moon { display: none; }
+html.light .theme-sun { display: none; }
+html.light .theme-moon { display: block; }
+
+/* ============================================================
+   TEMA CLARO SUAVE (ativado pela classe "light" no <html>)
+   Troque as cores abaixo para ajustar o visual do tema claro:
+     fundo #ece9e2 | cards #f5f3ee | blocos #e2ded5 | linhas #d0cbc0
+     títulos #1c1b22 | texto #373540 | secundário #5a5863 | apagado #787680
+     laranja de texto #c2561a | tags #a84a12
+   ============================================================ */
+html.light body { background-color: #d6cbb3; color: #373540; }
+
+/* Fundos e bordas */
+html.light .bg-ink-950 { background-color: #ddd4bf; }
+html.light .bg-ink-950\/80 { background-color: rgb(236 233 226 / 0.8); }
+html.light .bg-ink-900 { background-color: #f5f3ee; }
+html.light .bg-ink-800 { background-color: #e2ded5; }
+html.light .border-ink-700 { border-color: #d0cbc0; }
+html.light .border-ink-700\/60 { border-color: rgb(208 203 192 / 0.6); }
+
+/* Degradê do banner de projeto sem imagem */
+html.light .from-ink-800 {
+  --tw-gradient-from: #e2ded5 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(226 222 213 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+html.light .to-ink-950 { --tw-gradient-to: #ece9e2 var(--tw-gradient-to-position); }
+
+/* Textos */
+html.light .text-white { color: #1c1b22; }
+html.light .text-zinc-100,
+html.light .text-zinc-200,
+html.light .text-zinc-300 { color: #373540; }
+html.light .text-zinc-400 { color: #5a5863; }
+html.light .text-zinc-500 { color: #787680; }
+html.light .placeholder\:text-zinc-500::placeholder { color: #787680; }
+html.light .text-accent,
+html.light .hover\:text-accent:hover { color: #c2561a; }
+html.light .text-accent-soft { color: #a84a12; }
+
+/* Estados de hover que precisam manter a cor própria */
+html.light .hover\:text-ink-950:hover { color: #0b0a10; }
+html.light .hover\:text-white:hover { color: #ffffff; }
+
+/* Botão de voltar ao topo mantém o ícone branco */
+html.light [aria-label="Voltar ao topo"] { color: #ffffff; }
+
+/* Preenchimento automático no tema claro */
+html.light input:-webkit-autofill,
+html.light input:-webkit-autofill:hover,
+html.light input:-webkit-autofill:focus,
+html.light input:-webkit-autofill:active,
+html.light textarea:-webkit-autofill,
+html.light textarea:-webkit-autofill:hover,
+html.light textarea:-webkit-autofill:focus {
+  -webkit-text-fill-color: #373540;
+  caret-color: #373540;
+  -webkit-box-shadow: 0 0 0 1000px #f5f3ee inset;
+  box-shadow: 0 0 0 1000px #f5f3ee inset;
+}
