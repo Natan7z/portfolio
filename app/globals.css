@@ -55,7 +55,7 @@ html.light .theme-moon { display: block; }
      títulos #1c1b22 | texto #373540 | secundário #5a5863 | apagado #787680
      laranja de texto #c2561a | tags #a84a12
    ============================================================ */
-html.light body { background-color: #d6cbb3; color: #373540; }
+html.light body { background-color: #ece9e2; color: #373540; }
 
 /* Fundos e bordas */
 html.light .bg-ink-950 { background-color: #ddd4bf; }

@@ -3,7 +3,7 @@ import "./globals.css";
 import { profile } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: `Portfólio | ${profile.name}`,
+  title: `Portfolio | ${profile.name}`,
   description: profile.tagline,
 };
 

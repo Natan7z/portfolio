@@ -10,7 +10,7 @@ export default function Hero() {
         <Reveal direction="left">
           <p className="font-mono text-sm text-accent">{profile.role}</p>
           <h1 className="mt-3 text-5xl font-bold tracking-tight text-white sm:text-6xl">
-            <span className="text-accent">{profile.name} Sousa</span>
+            <span className="name-highlight">Natan Sousa</span>
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-zinc-400">
             {profile.tagline}
@@ -59,7 +59,7 @@ export default function Hero() {
               rel="noreferrer"
               aria-label="GitHub"
               title="GitHub"
-              className="group flex h-12 w-12 items-center justify-center rounded-xl border border-ink-700 text-zinc-300 transition-all duration-300 hover:-translate-y-1.5 hover:scale-110 hover:border-white hover:bg-white hover:text-ink-950 hover:shadow-[0_10px_25px_-5px_rgba(255,255,255,0.35)]"
+              className="group flex h-12 w-12 items-center justify-center rounded-xl border border-ink-700 text-zinc-300 transition-all duration-300 hover:-translate-y-1.5 hover:scale-110 hover:border-[#8957e5] hover:bg-[#8957e5] hover:text-white hover:shadow-[0_10px_25px_-5px_rgba(137,87,229,0.6)]"
             >
               <GitHubIcon className="h-6 w-6 transition-transform duration-300 group-hover:rotate-[8deg] group-hover:scale-110" />
             </a>
